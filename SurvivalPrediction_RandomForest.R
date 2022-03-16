@@ -1,5 +1,7 @@
-
+#Load data
 train=read.csv("/Users/komaluntwal/Documents/NJIT 2021/spring 2021/CS636 data analytics with R/train_titanic.csv")
+
+#data exploration
 summary(train)
 nrow(train)
 ncol(train)
@@ -31,7 +33,7 @@ hist(train_refined$Fare)
 #train_refined$Fare[is.na(train_refined$Fare)]=fare_mean
 #summary(train_refined)
 
-#Prediction 
+#Prediction using random forest algorithm
 #install.packages("randomForest")
 library(randomForest)
 colnames(train_refined)
